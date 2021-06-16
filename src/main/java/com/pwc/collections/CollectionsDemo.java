@@ -2,7 +2,7 @@ package com.pwc.collections;
 
 import java.util.*;
 
-public class ArrayListDemo {
+public class CollectionsDemo {
     public static void main(String[] args) {
         List<Integer> values= new ArrayList<Integer>();
         values.add(123);
