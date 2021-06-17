@@ -12,14 +12,27 @@ public class CollectionsDemo {
          * It is better to declare the reference of type Abstraction
          */
         List<Integer> values = new ArrayList<>();
-        values.add(123);
+        values.add(65);
         values.add(32);
         values.add(12);
         values.add(323);
 
         String s = null;
 
-        System.out.println(values);
+//        System.out.println(values);
+//        for (Integer v : values) {
+//            System.out.println(v);
+//        }
+
+//        values.forEach(x -> {
+//            System.out.println(x);
+//        });
+
+        /**
+         * Method reference
+         */
+        values.forEach(System.out::println);
+
 
         Collections.sort(values);
 
@@ -32,8 +45,6 @@ public class CollectionsDemo {
         Collections.sort(suppliers);
 
         System.out.println(suppliers);
-
-
 
 
         if (true) {
@@ -106,3 +117,4 @@ public class CollectionsDemo {
 
     }
 }
+
