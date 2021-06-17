@@ -1,17 +1,44 @@
 package com.pwc.collections;
 
+import com.pwc.trainings.assignment.Supplier;
+
 import java.util.*;
 
 public class CollectionsDemo {
+
     public static void main(String[] args) {
-        List<Integer> values= new ArrayList<Integer>();
+
+        /**
+         * It is better to declare the reference of type Abstraction
+         */
+        List<Integer> values = new ArrayList<>();
         values.add(123);
-        values.add(24);
-        values.add(58);
-        values.add(61);
-        values.add(37);
+        values.add(32);
+        values.add(12);
+        values.add(323);
+
+        String s = null;
+
         System.out.println(values);
 
+        Collections.sort(values);
+
+        System.out.println(values);
+
+        System.out.println(values.contains(33322));
+
+        List<Supplier> suppliers = Arrays.asList(new Supplier(101), new Supplier(102));
+
+        Collections.sort(suppliers);
+
+        System.out.println(suppliers);
+
+
+
+
+        if (true) {
+            return;
+        }
 
 
         /**
@@ -31,8 +58,7 @@ public class CollectionsDemo {
 
         /**
          *
-         * Map the values into string object concatenated with "Employee Code : "
-         * + what ever is the code
+         * Map the values into string object concatenated with "Employee Code : " + what ever is the code
          *
          */
 
@@ -43,45 +69,40 @@ public class CollectionsDemo {
         }
 
         System.out.println(mappedValues);
+        System.out.println(values);
 
-        int min = values.get(0);
-        int n= values.size();
-        for(int i=1;i<n;i++)
-        {
-            if(values.get(i)<min)
-            {min=values.get(i);}
+        /**
+         * Get me the min value from the list of integer (values)
+         *
+         */
 
-        }
-        System.out.println("*********************");
-        System.out.println(min);
-
-
-        List<Integer> values2= new LinkedList<Integer>();
+        List<Integer> values2 = new LinkedList<>();
         values2.add(123);
-        values2.add(234);
-        values2.add(345);
-        values2.add(456);
-        values2.add(567);
+        values2.add(32);
+        values2.add(12);
+        values2.add(323);
         System.out.println(values2);
+
 
         Set<Integer> values3 = new HashSet<>();
         values3.add(12);
         values3.add(12);
         values3.add(13);
+
         System.out.println(values3);
 
         Map<Integer, String> names = new HashMap<>();
-        names.put(101, "Gaurav");
-        names.put(102, "Aman");
-        names.put(103, "Arun");
 
-       System.out.println(names);
+        names.put(101, "Shakir");
+        names.put(102, "Farhan");
+        names.put(103, "Murali");
 
-        for(Map.Entry<Integer, String> entry : names.entrySet())
-        {
-            System.out.println(entry.getKey() + " -- "
-                    + entry.getValue() + " -- "
-                    + names.containsValue("Gaurav"));
+        System.out.println(names);
+
+        for (Map.Entry<Integer, String> entry : names.entrySet()) {
+            System.out.println(entry.getKey() + " --- " + entry.getValue());
         }
+
+
     }
 }
